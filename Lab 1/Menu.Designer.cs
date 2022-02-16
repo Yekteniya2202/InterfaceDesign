@@ -38,6 +38,9 @@ namespace Lab_1
             this.label5 = new System.Windows.Forms.Label();
             this.ExcelSaveButton = new System.Windows.Forms.Button();
             this.LogTextBox = new System.Windows.Forms.TextBox();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.radioButton3 = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.DNumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SNumericUpDown)).BeginInit();
             this.SuspendLayout();
@@ -146,11 +149,47 @@ namespace Lab_1
             this.LogTextBox.Size = new System.Drawing.Size(468, 207);
             this.LogTextBox.TabIndex = 11;
             // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Location = new System.Drawing.Point(328, 86);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(133, 21);
+            this.radioButton1.TabIndex = 12;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "Запись опыта 1";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            // 
+            // radioButton2
+            // 
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.Location = new System.Drawing.Point(328, 122);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(133, 21);
+            this.radioButton2.TabIndex = 13;
+            this.radioButton2.TabStop = true;
+            this.radioButton2.Text = "Запись опыта 2";
+            this.radioButton2.UseVisualStyleBackColor = true;
+            // 
+            // radioButton3
+            // 
+            this.radioButton3.AutoSize = true;
+            this.radioButton3.Location = new System.Drawing.Point(328, 158);
+            this.radioButton3.Name = "radioButton3";
+            this.radioButton3.Size = new System.Drawing.Size(133, 21);
+            this.radioButton3.TabIndex = 14;
+            this.radioButton3.TabStop = true;
+            this.radioButton3.Text = "Запись опыта 3";
+            this.radioButton3.UseVisualStyleBackColor = true;
+            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.radioButton3);
+            this.Controls.Add(this.radioButton2);
+            this.Controls.Add(this.radioButton1);
             this.Controls.Add(this.LogTextBox);
             this.Controls.Add(this.ExcelSaveButton);
             this.Controls.Add(this.label5);
@@ -180,6 +219,9 @@ namespace Lab_1
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button ExcelSaveButton;
         private System.Windows.Forms.TextBox LogTextBox;
+        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.RadioButton radioButton3;
     }
 }
 

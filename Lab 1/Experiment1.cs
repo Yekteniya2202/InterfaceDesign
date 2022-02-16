@@ -60,12 +60,14 @@ namespace Lab_1
             }
             else if(_expType == ExpType.Exp3)
             {
-                D = Experiments.Exp2.D[Experiments.Exp2.D.Length - SceneCounter];
-                b.Location = GetPointOnCircle(Experiments.Exp1.S[SubSceneCounter], 0, 0);
+                D = Experiments.Exp3.D[Experiments.Exp2.D.Length - SceneCounter];
+                b.Location = GetPointOnCircle(Experiments.Exp3.S[SubSceneCounter], 0, 0);
             }
-           
 
-            b.Size = new Size(5 * D, 5 * D);
+            DtextBox.Text = D.ToString();
+            StextBox.Text = Convert.ToInt32(Math.Sqrt(b.Location.X * b.Location.X + b.Location.Y * b.Location.Y)).ToString();
+
+            b.Size = new Size(D, (int)(1.5 * D));
             b.ForeColor = Color.Black;
             b.BackColor = Color.Black;
             b.FlatStyle = FlatStyle.Flat;

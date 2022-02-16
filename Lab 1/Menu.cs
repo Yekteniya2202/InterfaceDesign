@@ -83,34 +83,46 @@ namespace Lab_1
             Excel.Workbook workBook = app.Workbooks.Open(@"C:\Users\enigm\source\repos\InterfaceDesign\Lab 1\1.xlsx");
             app.DisplayAlerts = false;
             Excel.Worksheet sheet = (Excel.Worksheet)app.Worksheets.get_Item(1);
-            double[] t1 = GetMiddleValuedArray(Experiments.Exp1.t);
 
-            for(int i = 0; i < t1.Length; i++)
+            if (radioButton1.Checked)
             {
-                sheet.Cells[i + 4, 4] = t1[i];
-                sheet.Cells[i + 4, 6] = Experiments.Exp1.misses[i];
-            }
+                double[] t1 = GetMiddleValuedArray(Experiments.Exp1.t);
 
-            double[] t2 = GetMiddleValuedArray(Experiments.Exp2.t);
-
-            for (int i = 0; i < t2.Length; i++)
-            {
-                sheet.Cells[i + 17, 4] = t2[i];
-                sheet.Cells[i + 17, 6] = Experiments.Exp2.misses[i];
-            }
-
-            double[,] t3 = GetMiddleValuedArray(Experiments.Exp3.t);
-
-            int l1 = t3.GetLength(0);
-            int l2 = t3.GetLength(1);
-            for (int i = 0; i < l1; i++)
-            {
-                for(int j = 0; j < l2; j++)
+                for (int i = 0; i < t1.Length; i++)
                 {
-                    sheet.Cells[i * l2 + j + 29, 6] = t3[i, j];
-                    sheet.Cells[i * l2 + j + 29, 8] = Experiments.Exp3.misses[i,j];
+                    sheet.Cells[i + 4, 4] = t1[i];
+                    sheet.Cells[i + 4, 6] = Experiments.Exp1.misses[i];
                 }
             }
+
+
+            if (radioButton2.Checked)
+            {
+                double[] t2 = GetMiddleValuedArray(Experiments.Exp2.t);
+
+                for (int i = 0; i < t2.Length; i++)
+                {
+                    sheet.Cells[i + 17, 4] = t2[i];
+                    sheet.Cells[i + 17, 6] = Experiments.Exp2.misses[i];
+                }
+            }
+
+            if (radioButton3.Checked)
+            {
+                double[,] t3 = GetMiddleValuedArray(Experiments.Exp3.t);
+
+                int l1 = t3.GetLength(0);
+                int l2 = t3.GetLength(1);
+                for (int i = 0; i < l1; i++)
+                {
+                    for (int j = 0; j < l2; j++)
+                    {
+                        sheet.Cells[i * l2 + j + 29, 6] = t3[i, j];
+                        sheet.Cells[i * l2 + j + 29, 8] = Experiments.Exp3.misses[i, j];
+                    }
+                }
+            }
+            
 
             app.ActiveWorkbook.Save();
             app.Quit();
